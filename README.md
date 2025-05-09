@@ -39,11 +39,11 @@ Add this to your `claude_desktop_config.json`:
         "-e", "ALIAS_SEARCH",
         "-e", "RCA_SEARCH",
         "-e", "COUNTRIES",
-        "aml_watcher_mcp"
+        "techamlw/aml-watcher"
       ],
       "env": {
         "API_KEY": "api_key",
-        "PER_PAGE": "5"
+        "PER_PAGE": "1"
       }
     }
   }
@@ -60,7 +60,7 @@ Below is a detailed explanation of each environment argument specified in the `e
 | `API_KEY`      | String  | Yes      | N/A            | The API key for authentication.                                            |
 | `COUNTRIES`    | Array   | No       | N/A            | Array of countries to filter reports. **Note**: ISO 3166-1 alpha-2 country codes are supported. **Example**: `[\"CA\", \"IN\"]`. <a href="https://doc.amlwatcher.com/docs/Technical-appendicies/supported-countries/" target="_blank" rel="noopener noreferrer">See supported countries</a> |
 | `PER_PAGE`     | Integer | No       | 5              | The maximum number of results to return.                                   |
-| `MATCH_SCORE`  | Integer | No       | 70             | Match accuracy level (0–100).|
+| `MATCH_SCORE`  | Integer | No       | 80             | Match accuracy level (0–100).|
 | `CATEGORIES`   | Array   | Yes      | N/A            | Filters reports by categories (e.g., `[\"SIP\", \"PEP Level 1\"]`). <a href="https://doc.amlwatcher.com/docs/Technical-appendicies/categories/" target="_blank" rel="noopener noreferrer" >See available categories</a> |
 | `RCA_SEARCH`   | Boolean | No       | True           | Whether to search within Relatives and Close Associates (RCA).             |
 | `ALIAS_SEARCH` | Boolean | No       | True           | Whether to search within aliases.                                          |
@@ -83,8 +83,8 @@ For example, if your `args` list contains:
 Then your env should include:
 ```json
 "env": {
-  "PER_PAGE": "5",
-  "MATCH_SCORE": "90"
+  "PER_PAGE": "1",
+  "MATCH_SCORE": "80"
 }
 ```
 
